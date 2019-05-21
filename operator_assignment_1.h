@@ -1,9 +1,8 @@
 class CMyString
 {
 public:
-    CMyString(char* pData=nullptr);
+    CMyString(char pData[]):m_pData(pData){};
     CMyString(const CMyString& str);
     ~CMyString(void);
-private:
     char* m_pData;
-}
+};
