@@ -13,12 +13,13 @@ int main()
 	
 	CMyString str2("a");
 
-	CMyString str3=str;
+	CMyString str3;
+	str3=str;
 	cout<<str3<<endl;
 
 	const char* a="hello";
 	char b[]="world";
-	
+
 	cout<<strlen(a)<<endl;
 	cout<<sizeof(b)/sizeof(b[0])<<endl;	
         return 0;

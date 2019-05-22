@@ -16,8 +16,13 @@ char* CMyString::data() const
 CMyString& CMyString::operator=(const CMyString& str)
 {
 	cout<<"copy assignment"<<endl;
-	int size = strlen(str.data())+1;
-	void * add=malloc(size);
-	memcpy(add,(void*)str.data(),size);
-	m_pData=(char*)add;
+	if(this==&str)
+	return *this;
+	delete m_pData;
+	m_pData=nullptr;
+	
+	int size=strlen(str.data())+1;
+	m_pData=new char[size];
+	memcpy(m_pData,str.data(),size);
+	return *this;
 }
