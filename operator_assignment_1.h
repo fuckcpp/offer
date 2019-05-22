@@ -4,9 +4,7 @@ using namespace std;
 class CMyString
 {
 public:
-    CMyString(char* pData=nullptr):m_pData(pData){
-	cout<<"construct"<<endl;
-	} 
+    CMyString(char* pData=nullptr);
     CMyString(const CMyString& str);
     CMyString& operator=(const CMyString& str);
     ~CMyString(void);

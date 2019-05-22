@@ -10,17 +10,15 @@ ostream& operator<<(ostream& os,const CMyString& str)
 int main()
 {
 	CMyString str("string");	
-	
+	cout<<str<<endl;
+
 	CMyString str2("a");
 
+	cout<<str2<<endl;
 	CMyString str3;
-	str3=str;
+	str3=str2=str;
 	cout<<str3<<endl;
 
-	const char* a="hello";
-	char b[]="world";
-
-	cout<<strlen(a)<<endl;
-	cout<<sizeof(b)/sizeof(b[0])<<endl;	
+	
         return 0;
 }
